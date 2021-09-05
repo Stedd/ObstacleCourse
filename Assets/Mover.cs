@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float speedFactor; 
-    [SerializeField] Vector3 speedVec; 
+    [SerializeField] Vector3 speedFactor; 
+    [SerializeField] Vector3 controlVecRaw;
     [SerializeField] Vector3 controlVec;
-    Vector3 speed = new Vector3();
+    [SerializeField] Vector3 speedVec; 
+
+ 
     // Start is called before the first frame update
     void Start()
     {
-        speedFactor = 2.5f;
-        speedVec    = updateSpeed(speedFactor);
+        speedFactor = new Vector3 (7.5f,7.5f,7.5f);
         controlVec  = new Vector3 (0,0,0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // speedFactor     = 0.0015f;
-        speedVec        = updateSpeed(speedFactor);
+        controlVecRaw = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        controlVec.x    = Input.GetAxis("Horizontal");
-        controlVec.z    = Input.GetAxis("Vertical");
-        controlVec.Normalize();
+        controlVec = calcControlVec(controlVecRaw);
         
-        speed = Vector3.Scale(controlVec, speedVec);
+        speedVec = Vector3.Scale(controlVec, speedFactor);
 
-        transform.Translate(speed*Time.deltaTime);
+        transform.Translate(speedVec*Time.deltaTime);
     }
 
-    Vector3 updateSpeed(float _factor){
-        return new Vector3(_factor, _factor, _factor);
+    Vector3 calcControlVec(Vector3 _ctrlVec){
+        float _x = 0;
+        float _y = 0;
+        float _z = 0;
+        float angXZ = Vector3.AngleBetween(new Vector3(0,0,1),_ctrlVec);
+        _x = _ctrlVec.x * Mathf.Sin(angXZ);
+        _z = _ctrlVec.z * Mathf.Abs(Mathf.Cos(angXZ));
+        return new Vector3(_x, _y, _z);
     }
+
+
 
 
 }
