@@ -14,5 +14,6 @@ public class CamZoom : MonoBehaviour
     void Update()
     {
         transform.Translate(0,0,Input.GetAxis("Mouse ScrollWheel"));
+        
     }
 }
