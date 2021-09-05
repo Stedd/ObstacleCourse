@@ -1,0 +1,18 @@
+Game Design Notes
+
+These thoughs helps us make decisions while creating the game.
+It's important to get this into the workflow and it helps
+
+Player Experience:
+-Nimble
+
+Core Mechanic:
+-Avoid collisions
+
+Game Mechanics:
+-Go from A to B
+
+
+-Quick silly challenge
+Player name:
+-Dodger
