@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Obstacle
+  - Dropper
   layers:
   - Default
   - TransparentFX

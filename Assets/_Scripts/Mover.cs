@@ -16,7 +16,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PrintInstuctions();
+        //PrintInstuctions();
 
         speedBase           = new Vector3 (7.5f,7.5f,7.5f);
         speedModifier       = new Vector3 (1f,1f,1f);
