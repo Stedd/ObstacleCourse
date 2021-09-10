@@ -16,6 +16,8 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PrintInstuctions();
+
         speedBase           = new Vector3 (7.5f,7.5f,7.5f);
         speedModifier       = new Vector3 (1f,1f,1f);
         controlVecScaled    = new Vector3 (0,0,0);
@@ -37,7 +39,6 @@ public class Mover : MonoBehaviour
         transform.Translate(speedVec*Time.deltaTime);
     }
 
-
     Vector3 CalculateScaledControlVector(Vector3 _ctrlVec){
         // This function scales down the control vector to ensure speed
         // does not exceed Base speed when moving in multiple axes simultaneously.
@@ -48,8 +49,15 @@ public class Mover : MonoBehaviour
     }
 
     float ScaleControlVectorAxis (Vector3 _refVec, Vector3 _ctrlVec){
-        //Returm absolute value of Cosine of the angle between two vectors 
+        //Return absolute value of Cosine of the angle between two vectors 
         return Mathf.Abs(Mathf.Cos(Vector3.Angle(_refVec,_ctrlVec)*(Mathf.PI/180f)));
+    }
+
+    void PrintInstuctions()
+    {
+        Debug.Log("Welcome to the game");
+        Debug.Log("Move your player with WASD or arrow keys");
+        Debug.Log("Don't hit the walls");
     }
 
 
