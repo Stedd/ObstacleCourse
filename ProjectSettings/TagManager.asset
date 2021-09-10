@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - Obstacle
   - Dropper
+  - Ground
+  - hitObject
   layers:
   - Default
   - TransparentFX

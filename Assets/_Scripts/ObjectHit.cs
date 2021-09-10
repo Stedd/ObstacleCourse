@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
+
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Hit " + this.tag + "!");
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log("Hit " + this.tag + "!");
+            GetComponent<MeshRenderer>().material.color = Color.yellow;
+            gameObject.tag = "hitObject";
+        }
     }
 }
