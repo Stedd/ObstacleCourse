@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7834786295938291456
+--- !u!1 &7739383897823288431
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7834786295938291457}
-  - component: {fileID: 7834786295938291482}
-  - component: {fileID: 7834786295938291461}
-  - component: {fileID: 7834786295938291460}
-  - component: {fileID: 7834786295938291463}
-  - component: {fileID: 7834786295938291462}
+  - component: {fileID: 7739383897823288430}
+  - component: {fileID: 7739383897823288426}
+  - component: {fileID: 7739383897823288427}
+  - component: {fileID: 7739383897823288428}
   m_Layer: 0
-  m_Name: Spinner
+  m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7834786295938291457
+--- !u!4 &7739383897823288430
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.424, z: 0}
-  m_LocalScale: {x: 0.27212, y: 0.614326, z: 2.8785133}
+  m_GameObject: {fileID: 7739383897823288431}
+  m_LocalRotation: {x: -0, y: -0, z: -0.16727649, w: 0.98591006}
+  m_LocalPosition: {x: -21.58, y: 3.35, z: 0}
+  m_LocalScale: {x: 13.879526, y: 1, z: 31.37}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7834786295938291482
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.259}
+--- !u!33 &7739383897823288426
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
+  m_GameObject: {fileID: 7739383897823288431}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7834786295938291461
+--- !u!23 &7739383897823288427
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
+  m_GameObject: {fileID: 7739383897823288431}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39e38f047ef4ea04bbc0ad46c765e594, type: 2}
+  - {fileID: 2100000, guid: fdd1e05fcaa7cbc40a8ce63e5ccec914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,42 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7834786295938291460
+--- !u!65 &7739383897823288428
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
+  m_GameObject: {fileID: 7739383897823288431}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7834786295938291463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15bdd02c7ba95d84a9d09b727d3a6688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7834786295938291462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7834786295938291456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69508d25ea285ff4d8f3840ef6d181e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseSpeed: {x: 0, y: 0.5, z: 0}
-  randomSpeedModifier: {x: 0, y: 0.5, z: 0}

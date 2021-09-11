@@ -9,7 +9,7 @@ public class ObjectHit : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("Hit " + this.tag + "!");
+            //Debug.Log("Hit " + this.tag + "!");
             GetComponent<MeshRenderer>().material.color = Color.yellow;
             gameObject.tag = "hitObject";
         }
